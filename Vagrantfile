@@ -27,6 +27,8 @@ Vagrant.configure("2") do |config|
   # This will allow the virtual machine to communicate of the common proxy port 8080.
   config.vm.network :forwarded_port, guest: 8080, host: 9090
 
+  config.vm.network :forwarded_port, guest: 80, host:9000
+
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network :private_network, ip: "192.168.33.10"
