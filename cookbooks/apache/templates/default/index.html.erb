@@ -5,9 +5,12 @@
     <title></title>
 </head>
 <body>
-    <h1>Hello <%= node["fqdn"] %>!</h1>
+    <h1>Welcome to <%= node["company"] %>!</h1>
+
+    <h2>Hello <%= node["fqdn"] %>!</h2>
     <p>
-        This server has <%= node["memory"]["total"].to_i / 1024 %> MB memory.
+        This server has <%= node["memory"]["total"].to_i / 1024 %> MB memory. <br>
+        Idletime <%= node["idletime"] %>
     </p>
 </body>
 </html>
